@@ -782,3 +782,6 @@ body {
   justify-content: center;
   align-items: center;
 }
+.campo-oculto {
+  display: none;
+}
