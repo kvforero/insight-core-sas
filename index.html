@@ -225,7 +225,8 @@
       <h3>Déjanos un mensaje</h3>
       <p>Diligencia el formulario y pronto nos pondremos en contacto contigo.</p>
 
-      <form id="contactoForm" class="contacto-form">
+      <form id="contactoForm" class="contacto-form" name="contacto" method="POST" data-netlify="true">
+       <input type="hidden" name="form-name" value="contacto">
         <div class="form-group">
           <label for="nombre">Nombre</label>
           <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
