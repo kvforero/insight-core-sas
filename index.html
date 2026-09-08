@@ -3,179 +3,420 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Insight Core SAS · Soluciones geoespaciales</title>
-  <meta name="description" content="Topografía, SIG, ingeniería civil, cartografía, BIM y avalúos para proyectos de infraestructura en Colombia.">
+
+  <meta
+    name="description"
+    content="Topografía, SIG, ingeniería civil, cartografía, BIM y avalúos para proyectos de infraestructura en Colombia."
+  >
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  >
 
   <link rel="stylesheet" href="estilos.css">
+  <script src="script.js" defer></script>
 </head>
+
 <body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
   <header class="header">
-    <nav class="navbar">
+    <nav class="navbar" aria-label="Navegación principal">
       <a href="#inicio" class="brand">
-        <img src="assets/img/logo-insight-core.png" alt="Logo Insight Core SAS">
+        <img
+          src="assets/img/logo-insight-core.png"
+          alt="Logo Insight Core SAS"
+        >
+
         <div>
           <span>INSIGHT CORE SAS</span>
           <small>Soluciones geoespaciales</small>
         </div>
       </a>
 
-      <button class="menu-btn" id="menuBtn" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">☰</button>
+      <button
+        type="button"
+        class="menu-btn"
+        id="menuBtn"
+        aria-label="Abrir menú"
+        aria-expanded="false"
+        aria-controls="menu"
+      >
+        ☰
+      </button>
 
       <ul class="menu" id="menu">
         <li><a href="#inicio">Inicio</a></li>
         <li><a href="#nosotros">Nosotros</a></li>
         <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#beneficios">Beneficios</a></li>
         <li><a href="#sectores">Sectores</a></li>
-        <li><a href="#contacto" class="nav-contacto">Contáctanos</a></li>
+        <li>
+          <a href="#contacto" class="nav-contacto">Contáctanos</a>
+        </li>
       </ul>
     </nav>
   </header>
 
-  <main>
-
+  <main id="contenido">
+    <!-- INICIO -->
     <section id="inicio" class="hero">
+      <div class="animated-bg" aria-hidden="true"></div>
+
       <div class="hero-content">
-        <p class="etiqueta">Topografía · Ingeniería civil · SIG · Cartografía · BIM · Avalúos</p>
-        <h1>Soluciones geoespaciales desde el centro del conocimiento</h1>
+        <p class="etiqueta">
+          Topografía · Ingeniería civil · SIG · Cartografía · BIM · Avalúos
+        </p>
+
+        <h1>
+          Menos procesos manuales.<br>
+          <em>Más claridad para decidir.</em>
+        </h1>
+
         <p class="hero-text">
-          Integramos medición precisa, análisis geoespacial, ingeniería y modelos digitales
-          para apoyar la planificación, ejecución y control de proyectos de infraestructura.
+          Conectamos topografía, SIG e ingeniería para transformar datos
+          del territorio en información útil. Agiliza tus procesos y
+          avanza con mayor control en cada etapa de tu proyecto.
         </p>
 
         <div class="hero-buttons">
-          <a href="#servicios" class="btn btn-primary">Ver servicios</a>
-          <a href="#contacto" class="btn btn-outline">Contáctanos</a>
+          <a href="#servicios" class="btn btn-primary">
+            Explora nuestros servicios
+          </a>
+
+          <a href="#contacto" class="btn btn-outline">
+            Hablemos de tu proyecto
+          </a>
         </div>
       </div>
 
-      <div class="hero-card" aria-hidden="false">
-        <img src="assets/img/logo-insight-core.png" alt="Logo Insight Core SAS">
+      <div class="hero-card">
+        <span class="panel-label">DEL TERRITORIO A LA DECISIÓN</span>
+
+        <img
+          src="assets/img/logo-insight-core.png"
+          alt="Logo Insight Core SAS"
+        >
+
         <h2>Insight Core SAS</h2>
-        <p>Información confiable para tomar mejores decisiones.</p>
-        <span class="coord-tag">4°42' N · 74°04' O — Bogotá, Colombia</span>
+
+        <p>Medimos. Conectamos. Transformamos.</p>
+
+        <div class="hero-workflow">
+          <span>01 <b>Datos confiables</b></span>
+          <span>02 <b>Análisis con propósito</b></span>
+          <span>03 <b>Decisiones informadas</b></span>
+        </div>
+
+        <span class="coord-tag">
+          4°42' N · 74°04' O — Bogotá, Colombia
+        </span>
       </div>
     </section>
 
+    <div class="motion-toolbar">
+      <span>Topografía + SIG + Ingeniería</span>
+
+      <button
+        id="motionToggle"
+        type="button"
+        aria-pressed="false"
+      >
+        Pausar animación
+      </button>
+    </div>
+
+    <!-- NOSOTROS -->
     <section id="nosotros" class="section nosotros">
       <div class="section-title">
-        <span>¿Quiénes somos?</span>
+        <span>¿QUIÉNES SOMOS?</span>
         <h2>Datos, territorio e ingeniería en un solo equipo</h2>
       </div>
 
       <div class="two-columns">
         <div>
           <p>
-            Insight Core SAS es una empresa especializada en soluciones topográficas,
-            cartográficas y de ingeniería civil, orientada a apoyar la planificación,
-            ejecución y control de proyectos de infraestructura.
+            Insight Core SAS es una empresa especializada en soluciones
+            topográficas, cartográficas y de ingeniería civil, orientada
+            a apoyar la planificación, ejecución y control de proyectos
+            de infraestructura.
           </p>
+
           <p>
-            Combinamos medición precisa, análisis geoespacial y modelos digitales para
-            entregar información confiable, clara y útil para la toma de decisiones.
+            Combinamos medición precisa, análisis geoespacial y modelos
+            digitales para entregar información confiable, clara y útil
+            para la toma de decisiones.
           </p>
         </div>
 
         <div class="highlight-box">
           <h3>Nuestro valor diferenciador</h3>
+
           <ul>
             <li>Integración de topografía, SIG, ingeniería y avalúos.</li>
             <li>Captura de datos con GNSS, estación total y drone.</li>
             <li>Modelación BIM y análisis geoespacial.</li>
-            <li>Entregables técnicos listos para diseño, obra y licenciamiento.</li>
+            <li>
+              Entregables técnicos para apoyar el diseño, la obra
+              y los procesos de licenciamiento.
+            </li>
           </ul>
         </div>
       </div>
     </section>
 
+    <!-- SERVICIOS -->
     <section id="servicios" class="section servicios">
       <div class="section-title">
-        <span>Servicios principales</span>
+        <span>SERVICIOS PRINCIPALES</span>
         <h2>Soluciones para proyectos técnicos y territoriales</h2>
       </div>
 
       <div class="cards">
-
         <article class="card">
-          <img class="card-img" src="assets/img/brochure 1.png" alt="Topografía y geomática">
+          <img
+            class="card-img"
+            loading="lazy"
+            src="assets/img/brochure 1.png"
+            alt="Topografía y geomática"
+          >
+
           <div class="card-content">
             <div class="card-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
                 <path d="M12 3 4 20h16L12 3Z"></path>
                 <path d="M9.5 14h5"></path>
                 <circle cx="12" cy="9.5" r="1.2"></circle>
               </svg>
             </div>
-            <h3>Topografía & Geomática</h3>
+
+            <h3>Topografía &amp; Geomática</h3>
+
             <p>
-              Levantamientos GNSS y estación total, vuelos con drone, modelos digitales
-              del terreno, perfiles, secciones, replanteos y control de obra.
+              Levantamientos GNSS y estación total, vuelos con drone,
+              modelos digitales del terreno, perfiles, secciones,
+              replanteos y control de obra.
             </p>
           </div>
         </article>
 
         <article class="card">
-          <img class="card-img" src="assets/img/brochure 2.png" alt="Sistemas de Información Geográfica">
+          <img
+            class="card-img"
+            loading="lazy"
+            src="assets/img/brochure 2.png"
+            alt="Sistemas de Información Geográfica"
+          >
+
           <div class="card-content">
             <div class="card-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
                 <path d="m12 3 9 5-9 5-9-5 9-5Z"></path>
                 <path d="m3 13 9 5 9-5"></path>
               </svg>
             </div>
+
             <h3>Sistemas de Información Geográfica</h3>
+
             <p>
-              Construcción de soluciones SIG, análisis espacial, cartografía temática,
-              visores, mapas web y estandarización de bases de datos geográficas.
+              Construcción de soluciones SIG, análisis espacial,
+              cartografía temática, visores, mapas web y
+              estandarización de bases de datos geográficas.
             </p>
           </div>
         </article>
 
         <article class="card">
-          <img class="card-img" src="assets/img/brochure 4.png" alt="Ingeniería civil">
+          <img
+            class="card-img"
+            loading="lazy"
+            src="assets/img/brochure 4.png"
+            alt="Ingeniería civil"
+          >
+
           <div class="card-content">
             <div class="card-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
                 <path d="M4 20 20 4"></path>
                 <path d="M4 4h5v5"></path>
                 <path d="M15 15h5v5"></path>
               </svg>
             </div>
+
             <h3>Ingeniería Civil</h3>
+
             <p>
-              Diseño geométrico de vías, redes de acueducto y alcantarillado,
-              estudios previos, diagnósticos, presupuestos y acompañamiento técnico.
+              Diseño geométrico de vías, redes de acueducto y
+              alcantarillado, estudios previos, diagnósticos,
+              presupuestos y acompañamiento técnico.
             </p>
           </div>
         </article>
 
         <article class="card">
-          <img class="card-img" src="assets/img/brochure 3.png" alt="Avalúos y ordenamiento territorial">
+          <img
+            class="card-img"
+            loading="lazy"
+            src="assets/img/brochure 3.png"
+            alt="Avalúos y ordenamiento territorial"
+          >
+
           <div class="card-content">
             <div class="card-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
                 <path d="M4 21V9l8-5 8 5v12"></path>
                 <path d="M9 21v-6h6v6"></path>
               </svg>
             </div>
+
             <h3>Avalúos</h3>
+
             <p>
-              Avalúos urbanos y rurales, estudios de mercado, análisis comparativos,
-              informes técnicos y soporte para ordenamiento territorial.
+              Avalúos urbanos y rurales, estudios de mercado,
+              análisis comparativos, informes técnicos y soporte
+              para ordenamiento territorial.
             </p>
           </div>
         </article>
-
       </div>
     </section>
 
+    <!-- BENEFICIOS -->
+    <section id="beneficios" class="section beneficios">
+      <div class="section-title">
+        <span>EL VALOR PARA TU PROYECTO</span>
+
+        <h2>
+          Tu tiempo, tus datos y tus decisiones.<br>
+          Mejor conectados.
+        </h2>
+
+        <p>
+          Soluciones que facilitan el trabajo de tu equipo, desde
+          la captura de información hasta su entrega.
+        </p>
+      </div>
+
+      <div class="benefit-grid">
+        <article class="benefit featured">
+          <span class="benefit-number">01 / EFICIENCIA</span>
+
+          <h3>Menos tiempo en tareas repetitivas</h3>
+
+          <p>
+            Automatizamos y estandarizamos procesos SIG para agilizar
+            la preparación de datos, los análisis y la generación de
+            productos. Más tiempo para las decisiones que requieren
+            tu experiencia.
+          </p>
+
+          <span class="benefit-note">
+            Del trabajo manual a procesos reproducibles
+          </span>
+        </article>
+
+        <article class="benefit">
+          <span class="benefit-number">02 / CALIDAD</span>
+
+          <h3>Precisión con control técnico</h3>
+
+          <p>
+            Verificamos coordenadas, geometrías y atributos para
+            detectar inconsistencias y reducir reprocesos. Definimos
+            los controles según la escala, la fuente de datos y las
+            necesidades del proyecto.
+          </p>
+        </article>
+
+        <article class="benefit">
+          <span class="benefit-number">03 / FLEXIBILIDAD</span>
+
+          <h3>La tecnología adecuada para tu reto</h3>
+
+          <p>
+            Integramos herramientas de código abierto y software
+            propietario según tu infraestructura, presupuesto y
+            objetivos. Buscamos compatibilidad y aprovechamos
+            las capacidades que tu equipo ya tiene.
+          </p>
+        </article>
+
+        <article class="benefit">
+          <span class="benefit-number">04 / INTEGRACIÓN</span>
+
+          <h3>Información que trabaja en conjunto</h3>
+
+          <p>
+            Conectamos datos topográficos, SIG, CAD y BIM para
+            facilitar el intercambio de información entre
+            disciplinas y evitar tareas duplicadas.
+          </p>
+        </article>
+
+        <article class="benefit">
+          <span class="benefit-number">05 / VISIBILIDAD</span>
+
+          <h3>Tu proyecto, más fácil de entender</h3>
+
+          <p>
+            Convertimos información técnica en mapas, visores y
+            productos claros para consultar avances, identificar
+            restricciones y comunicar resultados.
+          </p>
+        </article>
+
+        <article class="benefit">
+          <span class="benefit-number">06 / CONTINUIDAD</span>
+
+          <h3>Entregables que puedes seguir usando</h3>
+
+          <p>
+            Organizamos y documentamos la información para
+            facilitar su consulta, actualización y uso en
+            las siguientes etapas del proyecto.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- SECTORES -->
     <section id="sectores" class="section sectores">
       <div class="section-title">
-        <span>Sectores</span>
+        <span>SECTORES</span>
         <h2>Sectores a los que servimos</h2>
       </div>
 
@@ -193,78 +434,68 @@
       </div>
     </section>
 
+    <!-- CONTACTO -->
     <section id="contacto" class="contacto contacto-pro">
       <div class="contacto-wrapper">
-
         <div class="contacto-info-panel">
-          <span class="contacto-label">Solicita más información</span>
+          <span class="contacto-label">HABLEMOS DE TU PROYECTO</span>
+
           <h2>Contáctanos</h2>
+
           <p>
-            Déjanos tus datos y cuéntanos qué necesita tu proyecto. En Insight Core SAS
-            te ayudamos a construir soluciones geoespaciales, topográficas y de ingeniería
-            para tomar mejores decisiones.
+            Cuéntanos qué necesita tu proyecto. En Insight Core SAS
+            te ayudamos a construir soluciones geoespaciales,
+            topográficas y de ingeniería para tomar mejores decisiones.
           </p>
 
           <div class="contacto-cards">
-
             <a class="contacto-card" href="tel:+573143907451">
-              <div class="contacto-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L8 9.6a16 16 0 0 0 6 6l1-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2Z"></path>
-                </svg>
-              </div>
               <div>
                 <h3>Teléfono</h3>
                 <p>+57 314 390 7451</p>
               </div>
             </a>
 
-            <a class="contacto-card" href="https://wa.me/573228667813" target="_blank">
-              <div class="contacto-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M21 11.5a8.4 8.4 0 0 1-8.9 8.4 8.5 8.5 0 0 1-4-1L3 20l1.2-4.9a8.4 8.4 0 1 1 16.8-3.6Z"></path>
-                </svg>
-              </div>
+            <a
+              class="contacto-card"
+              href="https://wa.me/573228667813"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <div>
                 <h3>WhatsApp</h3>
                 <p>+57 322 866 7813</p>
               </div>
             </a>
 
-            <a class="contacto-card" href="mailto:insightcoregerencia@gmail.com">
-              <div class="contacto-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                  <rect x="3" y="5" width="18" height="14" rx="2"></rect>
-                  <path d="m3 7 9 6 9-6"></path>
-                </svg>
-              </div>
+            <a
+              class="contacto-card"
+              href="mailto:insightcoregerencia@gmail.com"
+            >
               <div>
                 <h3>Email</h3>
                 <p>insightcoregerencia@gmail.com</p>
               </div>
             </a>
 
-            <a class="contacto-card" href="https://www.instagram.com/insight_coresas/" target="_blank">
-              <div class="contacto-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                  <rect x="3" y="3" width="18" height="18" rx="4"></rect>
-                  <circle cx="12" cy="12" r="4"></circle>
-                  <circle cx="17.2" cy="6.8" r="0.6" fill="currentColor" stroke="none"></circle>
-                </svg>
-              </div>
+            <a
+              class="contacto-card"
+              href="https://www.instagram.com/insight_coresas/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <div>
                 <h3>Instagram</h3>
                 <p>@insight_coresas</p>
               </div>
             </a>
 
-            <a class="contacto-card" href="https://www.linkedin.com/in/gerencia-insight-core-30910b412/?skipRedirect=true" target="_blank" rel="noopener noreferrer">
-              <div class="contacto-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M4 4h16v16H4z"></path>
-                  <path d="M8 10v6M8 7.5v.01M12 16v-3.5c0-1.2.9-2 2-2s2 .8 2 2V16"></path>
-                </svg>
-              </div>
+            <a
+              class="contacto-card"
+              href="https://www.linkedin.com/in/gerencia-insight-core-30910b412/?skipRedirect=true"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <div>
                 <h3>LinkedIn</h3>
                 <p>Gerencia Insight Core</p>
@@ -277,7 +508,11 @@
 
         <div class="contacto-form-panel">
           <h3>Déjanos un mensaje</h3>
-          <p>Diligencia el formulario y pronto nos pondremos en contacto contigo.</p>
+
+          <p>
+            Diligencia el formulario y pronto nos pondremos
+            en contacto contigo.
+          </p>
 
           <form
             id="contactoForm"
@@ -288,41 +523,88 @@
             netlify-honeypot="bot-field"
           >
             <input type="hidden" name="form-name" value="contacto">
+
             <p class="campo-oculto">
               <label>
                 No llenar este campo:
-                <input name="bot-field" type="text">
+                <input
+                  name="bot-field"
+                  type="text"
+                  tabindex="-1"
+                  autocomplete="off"
+                >
               </label>
             </p>
+
             <div class="form-group">
               <label for="nombre">Nombre</label>
-              <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+              <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                autocomplete="name"
+                placeholder="Tu nombre"
+                required
+              >
             </div>
 
             <div class="form-group">
               <label for="empresa">Empresa</label>
-              <input type="text" id="empresa" name="empresa" placeholder="Nombre de la empresa">
+              <input
+                type="text"
+                id="empresa"
+                name="empresa"
+                autocomplete="organization"
+                placeholder="Nombre de la empresa"
+              >
             </div>
 
             <div class="form-group">
               <label for="telefono">Teléfono</label>
-              <input type="tel" id="telefono" name="telefono" placeholder="Tu número de contacto" required>
+              <input
+                type="tel"
+                id="telefono"
+                name="telefono"
+                autocomplete="tel"
+                placeholder="Tu número de contacto"
+                required
+              >
             </div>
 
             <div class="form-group">
               <label for="correo">Correo electrónico</label>
-              <input type="email" id="correo" name="correo" placeholder="correo@empresa.com" required>
+              <input
+                type="email"
+                id="correo"
+                name="correo"
+                autocomplete="email"
+                placeholder="correo@empresa.com"
+                required
+              >
             </div>
 
             <div class="form-group full">
               <label for="mensaje">Mensaje</label>
-              <textarea id="mensaje" name="mensaje" rows="5" placeholder="Cuéntanos sobre tu proyecto" required></textarea>
+              <textarea
+                id="mensaje"
+                name="mensaje"
+                rows="5"
+                placeholder="Cuéntanos sobre tu proyecto"
+                required
+              ></textarea>
             </div>
 
-            <button type="submit" class="form-button">Enviar mensaje</button>
+            <button type="submit" class="form-button">
+              Enviar mensaje
+            </button>
+
+            <p
+              id="formStatus"
+              class="form-status"
+              role="status"
+            ></p>
           </form>
         </div>
-
       </div>
     </section>
   </main>
@@ -331,16 +613,24 @@
     <p>© 2026 Insight Core SAS. Todos los derechos reservados.</p>
 
     <div class="footer-redes">
-      <a href="https://www.instagram.com/insight_coresas/" target="_blank" rel="noopener noreferrer" class="footer-social">
+      <a
+        href="https://www.instagram.com/insight_coresas/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="footer-social"
+      >
         Instagram @insight_coresas
       </a>
 
-      <a href="https://www.linkedin.com/in/gerencia-insight-core-30910b412/?skipRedirect=true" target="_blank" rel="noopener noreferrer" class="footer-social">
+      <a
+        href="https://www.linkedin.com/in/gerencia-insight-core-30910b412/?skipRedirect=true"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="footer-social"
+      >
         LinkedIn Gerencia Insight Core
       </a>
     </div>
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
